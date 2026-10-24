@@ -1,0 +1,124 @@
+/* Experience Section */
+.experience-section {
+  position: relative;
+  background: radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.04) 0%, transparent 40%);
+}
+
+.experience-timeline {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 32px;
+  position: relative;
+  padding-bottom: 48px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 12px var(--accent-cyan);
+  margin-top: 12px;
+  z-index: 2;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 28px;
+  bottom: -48px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-cyan), rgba(255, 255, 255, 0.05));
+  z-index: 1;
+}
+
+.timeline-content {
+  flex: 1;
+  padding: 32px;
+  border-radius: var(--border-radius);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(6px);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.timeline-role {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.timeline-company {
+  font-size: 1rem;
+  color: var(--accent-cyan);
+  margin-top: 4px;
+}
+
+.timeline-period {
+  padding: 4px 14px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: var(--border-radius-full);
+  font-size: 0.85rem;
+  color: var(--accent-cyan);
+  font-weight: 500;
+}
+
+.timeline-desc {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.timeline-tag {
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-full);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .timeline-item {
+    gap: 16px;
+  }
+  .timeline-content {
+    padding: 24px;
+  }
+}
